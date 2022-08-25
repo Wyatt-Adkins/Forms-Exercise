@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please Work</title>
+</head>
+<body>
+  
+    
+    <form>
+        <fieldset>
+            <legend>Customer Experience Survey</legend>
+<!-- store number -->
+            <label for="ss"> Store Number</label>
+            <select name="store number chooser" id="ss">
+            <option hidden>Select A Store</option>
+            <option value="3109">3109</option>
+            <option value="2421">2421</option>
+            <option value="5357">5357</option>
+        </select>
+        <!-- store number end -->
+              <!-- when you visited -->
+              <form>
+                <fieldset>
+                    <legend>When you visited:</legend>
+    <label for="date">Date Visited:</label>
+<input type="date" id="date" >
+<br>
+<label for="time">Time</label>
+<input type="time" id="time" >
+</fieldset>
+</form>
+<!-- when you visited end -->
+    <label for="fullName">Full Name: </label>
+    <input type="text" id="fullname" placeholder="Name">
+<br>
+<label for="UserEmail">Email: </label>
+<input type="email" id="userEmail" placeholder="Email"required>
+<!-- new box start -->
+<form>
+    <fieldset>
+        <legend>How would you rate your level of satisfaction with your visit?</legend>
+        <div class="control">
+            <label class="radio">
+              <input type="radio" name="1">
+              Satisfied
+            </label>
+            <br>
+              <input type="radio" name="foobar" checked> Neither Satisfied nor Dissatisfied
+          <br>
+        <input type="radio" name="3" id="three">Dissatisfied
+    </fieldset>
+</form>
+<!-- almost done! -->
+<label for="tellus">Tell us about your experience:</label>
+<br>
+<textarea name="text box" id="tellus"  cols="20" rows="2" placeholder="text prompt"> </textarea>
+<br>
+<label for="numberr">Tell us about your experience:</label>
+<label>
+    <br>
+    <input id="nuumberr" type="number" size="1">
+    </label>
+    <br>
+    <input type="checkbox" id="agree">
+    <label for="agree">Please check the box if you would be willing to be contacted about your experience</label>
+    <br>
+
+
+
+
+    <label for="pass">Password:</label>
+    <label>
+        <input id="pass" type="password">
+<!-- bottom -->
+<br>
+<button>Reset</button>
+<input type="submit" value="Submit">
+</fieldset>
+</form>
+</body>
+</html>
