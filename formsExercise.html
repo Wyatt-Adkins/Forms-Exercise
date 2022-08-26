@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+           </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +28,7 @@
                 <fieldset>
                     <legend>When you visited:</legend>
     <label for="date">Date Visited:</label>
-<input type="date" id="date" >
+<input type="date" id="date" min="2022-01-01" max="2022-12-31">
 <br>
 <label for="time">Time</label>
 <input type="time" id="time" >
@@ -37,12 +39,11 @@
     <input type="text" id="fullname" placeholder="Name">
 <br>
 <label for="UserEmail">Email: </label>
-<input type="email" id="userEmail" placeholder="Email"required>
+<input type="email" id="userEmail" placeholder="Email">
 <!-- new box start -->
 <form>
     <fieldset>
         <legend>How would you rate your level of satisfaction with your visit?</legend>
-        <div class="control">
             <label class="radio">
               <input type="radio" name="1">
               Satisfied
@@ -58,13 +59,14 @@
 <br>
 <textarea name="text box" id="tellus"  cols="20" rows="2" placeholder="text prompt"> </textarea>
 <br>
-<label for="numberr">Tell us about your experience:</label>
-<label>
+
+<label for="numberr">Times visited in the last month:</label>
     <br>
-    <input id="nuumberr" type="number" size="1">
-    </label>
+    <div>
+    <input id="nuumberr" type="number" min="1" max="30">
+</div>
     <br>
-    <input type="checkbox" id="agree">
+    <input type="checkbox" id="agree" required>
     <label for="agree">Please check the box if you would be willing to be contacted about your experience</label>
     <br>
 
@@ -73,10 +75,11 @@
 
     <label for="pass">Password:</label>
     <label>
-        <input id="pass" type="password">
+        <input type="password" pattern=".{5,10}"  oninvalid="this.setCustomValidity('Please enter a password that is 5 to 10 characters in length')"
+        oninput="this.setCustomValidity('')"required>
 <!-- bottom -->
 <br>
-<button>Reset</button>
+<input type="button" value="Reset" onClick="window.location.reload();">
 <input type="submit" value="Submit">
 </fieldset>
 </form>
